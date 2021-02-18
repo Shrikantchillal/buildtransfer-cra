@@ -2,6 +2,10 @@
 
 npx json-server --watch db.json
 
+#Following implementation
+
+- Routing, HTTP service in axios with redux services, Loader added in higher order component, Basic unit testing, ESlint
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
