@@ -36,6 +36,10 @@ const allServices = store => next => action => {
                     let storageData = res.data;
                     next(allStorageUtilizationData(storageData));
                 })
+            break;
+        default:
+            next(action);
+        break;
     }
 }
 

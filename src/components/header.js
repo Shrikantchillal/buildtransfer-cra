@@ -14,6 +14,7 @@ const Header = () => {
                     <Button><Link to='/replication'>Replication Status</Link></Button>
                     <Button><Link to='/storage'>Storage Utilization</Link></Button>
                     <Button><Link to='/routes'>Route</Link></Button>
+                    <Button><Link to="/cursorPosition">Cursor Position</Link></Button>
                 </Grid>
                 <Grid item xs={4} style={{textAlign: 'right'}}>
                     <div>

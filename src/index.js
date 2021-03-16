@@ -14,9 +14,14 @@ import allReducers from './reducers/combineReducer';
 import allServices from './services/all-services';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import CursorPosition from './components/CursorPosition';
+import ContextAPI from './components/context/ContextApi';
+import Counter from './components/Counter';
+import MemoReactFunc from './components/memo';
 
 const store = createStore(allReducers, 
-  applyMiddleware(thunk, 
+  applyMiddleware(
+    thunk, 
     allServices
   )
 )
@@ -31,6 +36,10 @@ ReactDOM.render(
           <Route path="/replication" component={ReplicationStatus} />
           <Route path="/storage" component={StorageUtiliation} />
           <Route path="/routes" component={Routes} />
+          <Route path="/cursorPosition" component={CursorPosition} />
+          <Route path='/useCallBack' component={Counter} />
+          <Route path="/context" component={ContextAPI} />
+          <Route path='/memo' component={MemoReactFunc}></Route>
         </Router>
       </Provider>
     </Container>
