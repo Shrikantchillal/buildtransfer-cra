@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {Redirect} from 'react-router';
+import { Redirect } from 'react-router';
+import Display from "./Display";
+import MyContext from './MyContext';
 
 const ContextAPI = () => {
     const [redirect, updateRedirect] = useState(false);
@@ -12,7 +14,11 @@ const ContextAPI = () => {
         <>
             {redirect ? <Redirect to={'/'} /> : null } 
             <button onClick={handleBack}>Back</button>
-            context api
+            <MyContext.Provider value={45}>
+                <div>
+                    <Display />
+                </div>
+            </MyContext.Provider>
         </>
     )
 }

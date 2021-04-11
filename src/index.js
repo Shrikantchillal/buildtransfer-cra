@@ -18,6 +18,7 @@ import CursorPosition from './components/CursorPosition';
 import ContextAPI from './components/context/ContextApi';
 import Counter from './components/Counter';
 import MemoReactFunc from './components/memo';
+import RefsComp from './components/RefsComp';
 
 const store = createStore(allReducers, 
   applyMiddleware(
@@ -39,7 +40,8 @@ ReactDOM.render(
           <Route path="/cursorPosition" component={CursorPosition} />
           <Route path='/useCallBack' component={Counter} />
           <Route path="/context" component={ContextAPI} />
-          <Route path='/memo' component={MemoReactFunc}></Route>
+          <Route path='/memo' component={MemoReactFunc} />
+          <Route path="/refs" component={RefsComp} />
         </Router>
       </Provider>
     </Container>
